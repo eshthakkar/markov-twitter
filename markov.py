@@ -59,14 +59,13 @@ def make_text(chains):
 
     new_link = (link[1], choice(chains[link]))  # create the new key
     while(new_link in chains):
-        if len(text) > 110:
+        if (len(text) > 115):
             break
+
         text += " " + new_link[1]
         next_link = (new_link[1], choice(chains[new_link]))  # create the new key
         new_link = next_link
 
-    text += " " + new_link[1] 
-    #print len(text) # For debugging      
 
     return text
 
